@@ -8,11 +8,11 @@ import { map, delay } from 'rxjs/operators';
 import { of } from 'rxjs';
 
 
-@Injectable(
- // providedIn: 'root'
-)
+@Injectable({
+ providedIn: 'root'
+})
 export class PreguntaService {
-  private urlEndPoint:string = 'http://localhost:8080/api/preguntas';
+  private urlEndPoint:string = 'http://localhost:8080/api/pregunta';
 
   constructor(private http: HttpClient){ }
 
@@ -20,7 +20,7 @@ export class PreguntaService {
   getPreguntas(): Observable<pregunta[]>{
     return this.http.get(this.urlEndPoint).pipe(
       map(response => response as pregunta[])
-    );
+    )
   }
 
 }
