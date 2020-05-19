@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PartidaService } from './partida.service';
+import { partida } from './partida';
 
 @Component({
   selector: 'app-partida',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartidaComponent implements OnInit {
 
-  constructor() { }
+  partidas: partida[];
+  constructor(private partidaService: PartidaService) {
+
+    this.partidaService = partidaService;
+
+   }
 
   ngOnInit(): void {
+
+    this.partidaService.getPartidas().subscribe(
+      partidas => this.partidas = partidas //funcion anonima para simplificar
+      );
   }
 
 }

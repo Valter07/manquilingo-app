@@ -1,1 +1,27 @@
-<p>partida works!</p>
+<div class="card bg-light mb-3">
+    <div class="card-header">partidas</div>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Puntaje</th>
+                <th>Jugadores</th>
+                <th>Fecha</th>
+                <th>Tema</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let partida of partidas">
+              <tr >
+                <th>{{ partida.id}}</th>
+                <td>{{ partida.puntaje}}</td>
+                <td>{{ partida.jugadores}}</td>
+                <td>{{ partida.createAt}}</td>
+                <td>{{ partida.tema}}</td>
+              </tr>
+            </tbody>
+          </table>
+     
+    </div>
+  </div>
+  

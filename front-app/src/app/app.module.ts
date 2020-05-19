@@ -9,6 +9,7 @@ import { PreguntasComponent } from './preguntas/preguntas.component';
 import { PartidaComponent } from './partida/partida.component';
 import { JugadorComponent } from './jugador/jugador.component';
 import { PreguntaService } from './preguntas/pregunta.service';
+import { PartidaService } from './partida/partida.service';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -36,7 +37,7 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [PreguntaService],
+  providers: [PreguntaService, PartidaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,9 +3,6 @@ import { pregunta } from './pregunta';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { map, delay } from 'rxjs/operators';
-
-
-
 import { of } from 'rxjs';
 
 
