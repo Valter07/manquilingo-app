@@ -1,7 +1,7 @@
 export class pregunta  {
     id: string;
     tema: string;
-    nombre: string;
+    pregunta: string;
     respuestas: Array<string>;
     correcta: string;
 

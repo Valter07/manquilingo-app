@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, delay } from 'rxjs/operators';
 
 
+
 import { of } from 'rxjs';
 
 
@@ -14,7 +15,9 @@ import { of } from 'rxjs';
 export class PreguntaService {
   private urlEndPoint:string = 'http://localhost:8080/api/pregunta';
 
-  constructor(private http: HttpClient){ }
+  constructor(private http: HttpClient){ 
+    
+  }
 
 
   getPreguntas(): Observable<pregunta[]>{
