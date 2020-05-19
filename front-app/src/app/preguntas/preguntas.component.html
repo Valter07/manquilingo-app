@@ -1,1 +1,29 @@
-<p>preguntas works!</p>
+<h1>holaaa</h1>
+<div class="card bg-light mb-3">
+    <div class="card-header">Preguntas</div>
+    <div class="card-body">
+      <h5 class="card-title">Listado de preguntas</h5>
+  
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Tema</th>
+            <th>Nombre</th>
+            <th>Respuestas</th>
+            <th>Correcta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pregunta of preguntas">
+            <td>{{ pregunta.id}}</td>
+            <td>{{ pregunta.tema}}</td>
+            <td>{{ pregunta.nombre}}</td>
+            <td>{{ pregunta.respuestas}}</td>
+            <td>{{ pregunta.correcta}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

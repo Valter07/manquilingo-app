@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PreguntaService } from './pregunta.service';
+import { pregunta } from './pregunta';
+
 
 @Component({
   selector: 'app-preguntas',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreguntasComponent implements OnInit {
 
-  constructor() { }
+  preguntas: pregunta[];
+  
+  constructor(private preguntaService: PreguntaService){
+
+    this.preguntaService = preguntaService;
+  }
 
   ngOnInit(): void {
-  }
+
+    this.preguntaService.getPreguntas().subscribe(
+      preguntas => this.preguntas = preguntas //funcion anonima para simplificar
+      );  }
 
 }

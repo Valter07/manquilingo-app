@@ -8,6 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { PreguntasComponent } from './preguntas/preguntas.component';
 import { PartidaComponent } from './partida/partida.component';
 import { JugadorComponent } from './jugador/jugador.component';
+import { PreguntaService } from './preguntas/pregunta.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 const routes: Routes = [
@@ -24,15 +27,16 @@ const routes: Routes = [
     FooterComponent,
     PreguntasComponent,
     PartidaComponent,
-    JugadorComponent
+    JugadorComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [PreguntaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
