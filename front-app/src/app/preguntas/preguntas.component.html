@@ -2,7 +2,7 @@
     <div class="card-header">Preguntas</div>
     <div class="card-body">
       
-      <div class="row" *ngFor="let pregunta of preguntas; let i = index">
+      <div class="row" *ngFor="let pregunta of preguntas| async" [class.success]="pregunta === selectedPregunta">
         <div class="col-12">
           <br>
           <h1> {{ pregunta.tema }}</h1>
