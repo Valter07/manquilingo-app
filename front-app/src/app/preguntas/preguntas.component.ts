@@ -12,8 +12,8 @@ import { HttpClientModule} from '@angular/common/http';
 })
 export class PreguntasComponent implements OnInit {
   
-  preguntas: Observable<pregunta[]>;
-  selectedPregunta: pregunta;
+  preguntas: pregunta[];
+  //selectedPregunta: pregunta;
   
   constructor(private preguntaService: PreguntaService){
 
@@ -24,16 +24,16 @@ export class PreguntasComponent implements OnInit {
 
   ngOnInit(): void {
 
-    /*this.preguntaService.getPreguntas().subscribe(
+    this.preguntaService.getPreguntas().subscribe(
       preguntas => this.preguntas = preguntas //funcion anonima para simplificar
-      );  */
+      );  
 
       /*this.preguntaService.getPregunta2().subscribe(
         preguntas => this.preguntas = preguntas //funcion anonima para simplificar
         
         );  */
        
-        this.preguntas = this.preguntaService.getPregunta2();
+        //this.preguntas = this.preguntaService.getPreguntas();
 
         
     

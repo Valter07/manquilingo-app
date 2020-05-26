@@ -22,13 +22,13 @@ export class PreguntaService {
   }
 
 
-/*  getPreguntas(): Observable<pregunta[]>{
+ getPreguntas(): Observable<pregunta[]>{
     return this.http.get(this.urlEndPoint).pipe(
       map(response => response as pregunta[])
     )
-  }*/
+  
 
-
+/*
   getPregunta2(): Observable<Array<pregunta>> {
 
     this.preguntas = [];
@@ -58,6 +58,7 @@ export class PreguntaService {
         }
       }
     });
-}
 
+}*/
+ }
 }

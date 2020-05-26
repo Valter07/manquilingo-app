@@ -2,17 +2,17 @@
     <div class="card-header">Preguntas</div>
     <div class="card-body">
       
-      <div class="row" *ngFor="let pregunta of preguntas| async" [class.success]="pregunta === selectedPregunta">
+      <div class="row" *ngFor="let pregunta of preguntas">
         <div class="col-12">
           <br>
           <h1> {{ pregunta.tema }}</h1>
           <h2>{{ pregunta.pregunta }} </h2>
           <div class="btn-group-vertical btn-block">
 
-            <button type="submit" class="btn btn-outline-secondary" >{{ pregunta.respuestas[0] }}</button>
-            <button type="button" class="btn btn-outline-secondary">{{ pregunta.respuestas[1] }}</button>
-            <button type="button" class="btn btn-outline-secondary">{{ pregunta.respuestas[2] }}</button>
-            <button type="button" class="btn btn-outline-secondary">{{ pregunta.correcta }}</button>
+            <button type="submit" class="btn btn-outline-secondary" >{{ pregunta.respuestas[0].respuesta }}</button>
+            <button type="button" class="btn btn-outline-secondary">{{ pregunta.respuestas[1].respuesta }}</button>
+            <button type="button" class="btn btn-outline-secondary">{{ pregunta.respuestas[2].respuesta }}</button>
+            <button type="button" class="btn btn-outline-secondary">{{ pregunta.respuestas[3].respuesta }}</button>
           </div>
         </div>
       </div>
